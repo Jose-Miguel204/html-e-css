@@ -1,0 +1,104 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+header{
+    background-color: black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    color: white;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    font-family: arial;
+    font-size: 1.2em;
+    display: flex;
+    padding: 22px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    padding: 10px;
+    position: relative;
+}
+nav a::after{ /*linha dinamica*/
+    content: " ";
+    width: 0%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: orange;
+    transition: 0.5s ease-in-out;
+}
+nav a:hover::after{
+    width: 100%;
+}
+.botao {
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em; 
+    cursor: pointer;
+    border-radius: 8px; 
+    position: relative;
+  }
+.botao::after{ /*linha dinamica*/
+    content: " ";
+    width: 0%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: orange;
+    transition: 0.5s ease-in-out;
+}
+  .botao:hover::after {
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+   
+}
+.container{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 200px;
+    max-width: 800px;
+    align-items: center;
+}
+.caixa{
+    height: 210px;
+    width: 210px;
+    background-color: gray;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.425);
+    transition: all 0.42s ease; 
+    cursor: pointer;
+}
+.caixa:hover{
+    padding: 5px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    min-width: 200px;
+    max-width: 720px;
+}
+.grid > div:nth-child( n + 5){
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
